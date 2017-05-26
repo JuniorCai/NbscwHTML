@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账号设置</title>
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/bootstrap.css">
+    <script type="text/javascript" src="../../../../public/js/jquery.js"></script>
+    <script type="text/javascript" src="../../../../public/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/memberCenter/basePublicCenter.css">
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/publicCommon.css">
+
+
+</head>
+<body>
+<!--导航栏-->
+<!--#include file="../shared/header/topNav.inc"-->
+<div class="nav-layout w100">
+    <div class="navContainer  clearfix">
+        <div class="centerTitle">
+            <a href="#"><img src="../../../../public/images/memberCenter/logo.png"></a>
+        </div>
+        <ul class="centerNav">
+            <li class="active navItem">账号管理</li>
+            <li class="navItem">信息管理</li>
+            <li class="navItem"><a href="../../common/Index.html">网站首页</a></li>
+        </ul>
+    </div>
+</div>
+<!--#include virtual-->
+
+<div class="clearfix bodyContent" style="width: 100%">
+    <!--二级菜单-->
+    <div class="navMenuContainer  clearfix">
+        <div class="menuTitle">
+            账号管理
+        </div>
+        <ul class="menuList">
+            <li>消息通知<a>发信</a></li>
+            <li>账户设置<a>查看</a></li>
+            <li>收藏管理<a>添加</a></li>
+            <li>贸易提醒<a>添加</a></li>
+            <li>我的友商<a>添加</a></li>
+            <li>客服中心<a>提问</a></li>
+        </ul>
+    </div>
+    <div class="contentContainer clearfix">
+        <div class="menu">
+            <table cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td id="Tab0" class="tab_on"><a href="javascript:Tab(0);"><span>个人资料</span></a></td>
+                    <td id="Tab1" class="tab"><a href="javascript:Tab(1);"><span>密码管理</span></a></td>
+                </tr>
+                </tbody></table>
+        </div>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane  active" id="detail">
+                <div class="detailContent">
+                    <form id="dform" onsubmit="return Dcheck();" action="?" method="post">
+                        <input type="hidden" value="0" id="tab" name="tab">
+                        <table cellspacing="1" cellpadding="6" class="tb">
+                            <tbody style="display:;" id="Tabs0">
+                            <tr>
+                                <td class="tl">会员名</td>
+                                <td class="tr f_b">junior</td>
+                            </tr>
+                            <tr>
+                                <td class="tl">头像</td>
+                                <td class="tr f_b"><a href="avatar.php"><img width="128" height="128" title="点击修改" src="http://shicaicheng.gotoip55.com/api/avatar/show.php?username=junior&amp;size=large&amp;time=1472972038"></a></td>
+                            </tr>
+                            <tr>
+                                <td class="tl">昵称</td>
+                                <td class="tr">junior&nbsp;&nbsp;<a class="t" href="send.php?action=passport">[修改]</a></td>
+                            </tr>
+                            <tr>
+                                <td class="tl">邮件</td>
+                                <td class="tr">cjq4@outlook.com&nbsp;&nbsp;<img align="absmiddle" title="已认证" src="http://shicaicheng.gotoip55.com/member/image/v_email.gif"></td>
+                            </tr>
+                            <tr>
+                                <td class="tl"><span class="f_red">*</span> 姓名</td>
+                                <td class="tr"><input type="hidden" value="蔡先生" id="truename" name="post[truename]">蔡先生&nbsp;&nbsp;<img align="absmiddle" title="已认证" src="http://shicaicheng.gotoip55.com/member/image/v_truename.gif"></td>
+                            </tr>
+                            <tr>
+                                <td class="tl"><span class="f_red">*</span> 性别</td>
+                                <td class="tr">
+                                    <input type="radio" checked="checked" value="1" name="post[gender]"> 先生
+                                    <input type="radio" value="2" name="post[gender]"> 女士
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tl">手机</td>
+                                <td class="tr"><input type="hidden" value="" id="mobile" name="post[mobile]">&nbsp;&nbsp;<img align="absmiddle" title="已认证" src="http://shicaicheng.gotoip55.com/member/image/v_mobile.gif"></td>
+                            </tr>
+                            <tr>
+                                <td class="tl">部门</td>
+                                <td class="tr"><input type="text" value="" id="department" name="post[department]" size="20"></td>
+                            </tr>
+                            <tr>
+                                <td class="tl">职位</td>
+                                <td class="tr"><input type="text" value="" id="career" name="post[career]" size="20"></td>
+                            </tr>
+                            <tr>
+                                <td class="tl">QQ</td>
+                                <td class="tr"><input type="text" value="" id="qq" name="post[qq]" size="20"> 如果图标无法点亮，请点<a class="b" target="_blank" href="http://shang.qq.com/v3/widget.html">这里</a>设置</td>
+                            </tr>
+                            </tbody>
+                            <tbody style="display:none;" id="Tabs1">
+                            <tr>
+                                <td class="tl">新登录密码</td>
+                                <td class="tr"><input type="password" autocomplete="off" onblur="validator('password');" id="password" name="post[password]" size="20">&nbsp;<span class="f_gray">如不更改密码,请留空</span> <span class="f_red" id="dpassword"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="tl">重复登录密码</td>
+                                <td class="tr"><input type="password" autocomplete="off" id="cpassword" name="post[cpassword]" size="20">&nbsp;<span class="f_red" id="dcpassword"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="tl">现有密码</td>
+                                <td class="tr f_red"><input type="password" autocomplete="off" id="oldpassword" name="post[oldpassword]" size="20">&nbsp;如要更改密码，需输入现有密码 <span class="f_red" id="doldpassword"></span></td>
+                            </tr>
+                            </tbody>
+                            <tbody><tr>
+                                <td class="tl">&nbsp;</td>
+                                <td height="30" class="tr"><input type="submit" class="btn_g" value=" 保 存 " name="submit"></td>
+                            </tr>
+                            </tbody></table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    var vid = '';
+    function validator(id) {
+        if(!Dd(id).value) return false;
+        vid = id;
+        makeRequest('moduleid=2&amp;action=member&amp;job='+id+'&amp;value='+Dd(id).value+'&amp;userid=16', AJPath, '_validator');
+    }
+    function _validator() {
+        if(xmlHttp.readyState==4 &amp;&amp; xmlHttp.status==200) {
+            Dd('d'+vid).innerHTML = xmlHttp.responseText ? xmlHttp.responseText : '';
+        }
+    }
+    function Dcheck() {
+        if(Dd('truename').value == '') {
+            Tab(0);
+            Dmsg('请填写真实姓名', 'truename');
+            return false;
+        }
+        if(Dd('password').value != '') {
+            if(Dd('cpassword').value == '') {
+                Tab(1);
+                Dmsg('请重复输入密码', 'cpassword');
+                return false;
+            }
+            if(Dd('password').value != Dd('cpassword').value) {
+                Tab(1);
+                Dmsg('两次输入的密码不一致', 'password');
+                return false;
+            }
+            if(Dd('oldpassword').value == '') {
+                Tab(1);
+                Dmsg('请输入密码', 'oldpassword');
+                return false;
+            }
+        }
+        if(Dd('payword').value != '') {
+            if(Dd('cpayword').value == '') {
+                Tab(1);
+                Dmsg('请重复输入支付密码', 'cpayword');
+                return false;
+            }
+            if(Dd('payword').value != Dd('cpayword').value) {
+                Tab(1);
+                Dmsg('两次输入的支付密码不一致', 'payword');
+                return false;
+            }
+            if(Dd('oldpayword').value == '') {
+                Tab(1);
+                Dmsg('请输入支付密码', 'oldpayword');
+                return false;
+            }
+        }
+        if(Dd('type').value == '') {
+            Tab(2);
+            Dmsg('请选择公司类型', 'type');
+            return false;
+        }
+        if(Dd('areaid_1').value == 0) {
+            Tab(2);
+            Dmsg('请选择公司所在地', 'areaid');
+            return false;
+        }
+        if(Dd('catid').value.length &lt; 2) {
+            Tab(2);
+            Dmsg('请选择公司主营行业', 'catid');
+            return false;
+        }
+        if(Dd('business').value.length &lt; 4) {
+            Tab(2);
+            Dmsg('主要经营范围最少3字', 'business');
+            return false;
+        }
+        if(Dd('regyear').value.length &lt; 4) {
+            Tab(2);
+            Dmsg('请填写公司成立年份', 'regyear');
+            return false;
+        }
+        if(Dd('daddress').value.length &lt; 5) {
+            Tab(3);
+            Dmsg('请填写公司地址', 'daddress');
+            return false;
+        }
+        if(Dd('telephone').value.length &lt; 6) {
+            Tab(3);
+            Dmsg('请填写公司电话', 'telephone');
+            return false;
+        }
+        if(FCKLen('content') &lt; 10) {
+            Tab(4);
+            Dmsg('公司介绍最少10字，当前已经输入'+FCKLen('content')+'字', 'content');
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>

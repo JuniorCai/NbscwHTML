@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求购管理</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../public/css/bootstrap.css">
+    <script type="text/javascript" src="../../../../../public/js/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../../../public/js/extendPagination.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../../../../../public/css/memberCenter/basePublicCenter.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../public/css/publicCommon.css">
+
+</head>
+<body>
+<!--导航栏-->
+<!--#include file="../shared/header/topNav.inc"-->
+<div class="nav-layout w100">
+    <div class="navContainer  clearfix">
+        <div class="centerTitle">
+            <a href="#"><img src="../../../../../public/images/memberCenter/logo.png"></a>
+        </div>
+        <ul class="centerNav">
+            <li class="active navItem">账号管理</li>
+            <li class="navItem">信息管理</li>
+            <li class="navItem"><a href="../../../common/Index.html">网站首页</a></li>
+        </ul>
+    </div>
+</div>
+<!--#include virtual-->
+
+<div class="clearfix bodyContent" style="width: 100%">
+    <!--二级菜单-->
+    <div class="navMenuContainer  clearfix">
+        <div class="menuTitle">
+            账号管理
+        </div>
+        <ul class="menuList">
+            <li>消息通知<a>发信</a></li>
+            <li>账户设置<a>查看</a></li>
+            <li>收藏管理<a>添加</a></li>
+            <li>贸易提醒<a>添加</a></li>
+            <li>我的友商<a>添加</a></li>
+            <li>客服中心<a>提问</a></li>
+        </ul>
+    </div>
+    <div class="contentContainer clearfix">
+        <div class="menu">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td id="addPurchase" class="tab"><a href="?action=inbox"><span>添加求购</span></a></td>
+                    <td id="purchasingList" class="tab_on"><a href="?action=inbox"><span>已发布</span></a></td>
+                    <td id="pendingList" class="tab"><a href="?action=inbox"><span>审核中</span></a></td>
+                    <td id="unpendingList" class="tab"><a href="?action=inbox"><span>未通过</span></a></td>
+                    <td id="unpurchaseList" class="tab"><a href="?action=inbox"><span>已下线</span></a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane " id="addPanel">
+                <div class="detailContent">
+                    <form onsubmit="return check();" target="send" id="dform" action="?" method="post">
+                        <input type="hidden" value="add" name="action">
+                        <input type="hidden" value="6" name="mid">
+                        <input type="hidden" value="0" name="itemid">
+                        <input type="hidden" value="http://shicaicheng.gotoip55.com/member/my.php?mid=6" name="forward">
+                        <table cellspacing="1" cellpadding="6" class="tb">
+                            <tbody><tr>
+                                <td class="tl"><span class="f_red">*</span> 信息类型</td>
+                                <td class="tr">
+                                    <input type="radio" checked="" value="0" name="post[typeid]"> <label id="t_0" for="typeid_0">求购</label>&nbsp;
+                                </td>
+                            </tr>
+                            <!--
+                            <tr>
+                            <td class="tl"><span class="f_red">*</span> 产品名称</td>
+                            <td class="tr f_gray"><input name="post[tag]" type="text" size="20" id="tag" value="" onkeyup="_p();"/><span id="reccate" style="display:none;"> <a href="javascript:" onclick="reccate(6, 'tag');" class="t">[分类建议]</a></span> （2-16个字）<span id="dtag" class="f_red"></span><br/>产品名称方便买家搜索，此处填写产品名称。例如：“电脑桌”。勿填产品型号、规格、品牌等。</td>
+                            </tr>
+                            -->
+                            <tr>
+                                <td class="tl"><span class="f_red">*</span> 信息标题</td>
+                                <td class="tr f_gray"><input type="text" value="" size="50" id="title" name="post[title]"> （2-30个字）<span class="f_red" id="dtitle"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="tl"><span class="f_red">*</span> 行业分类</td>
+                                <td class="tr">
+                                    <div id="catesch"></div>
+                                    <input type="hidden" value="0" id="catid_1" name="post[catid]">
+                                    <span id="load_category_1">
+                                        <select style="height:120px;width:180px;" size="2" onchange="load_category(this.value, 1);">
+                                            <option value="0">选择分类</option>
+                                            <option value="433">荒料板材 </option>
+                                            <option value="434">环境装饰</option>
+                                            <option value="436">石材家具</option>
+                                            <option value="437">异形工艺</option>
+                                            <option value="435">养护辅料</option>
+                                            <option value="438">石材机械</option>
+                                        </select>
+                                    </span>
+                                    <script type="text/javascript">
+                                        var category_moduleid = new Array;category_moduleid[1]="6";
+                                        var category_title = new Array;category_title[1]='选择分类';
+                                        var category_extend = new Array;category_extend[1]='size="2" style="height:120px;width:180px;"';
+                                        var category_catid = new Array;category_catid[1]='0';
+                                        var category_deep = new Array;category_deep[1]='0';</script>
+                                    <script src="http://shicaicheng.gotoip55.com/file/script/category.js" type="text/javascript"></script>
+                                    <br>
+                                    <input type="button" class="btn" onclick="schcate(6);" value="搜索分类">
+                                    <span class="f_red" id="dcatid"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tl">详细说明</td>
+                                <td class="tr f_gray"><input type="hidden" style="" value="" id="content___Config">
+                                    <textarea class="dsn" id="content" name="post[content]" style=""></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tl">产品图片</td>
+                                <td class="tr">
+                                    <input type="hidden" value="" id="thumb" name="post[thumb]">
+                                    <input type="hidden" value="" id="thumb1" name="post[thumb1]">
+                                    <input type="hidden" value="" id="thumb2" name="post[thumb2]">
+                                    <table width="360">
+                                        <tbody><tr align="center" height="120" class="c_p">
+                                            <td width="120"><img width="100" height="100" onclick="if(this.src.indexOf('waitpic.gif') == -1){_preview(Dd('showthumb').src, 1);}else{Dalbum('',6,100,100, Dd('thumb').value, true);}" alt="" title="预览图片" id="showthumb" src="http://shicaicheng.gotoip55.com/skin/default/image/waitpic.gif"></td>
+                                            <td width="120"><img width="100" height="100" onclick="if(this.src.indexOf('waitpic.gif') == -1){_preview(Dd('showthumb1').src, 1);}else{Dalbum(1,6,100,100, Dd('thumb1').value, true);}" alt="" title="预览图片" id="showthumb1" src="http://shicaicheng.gotoip55.com/skin/default/image/waitpic.gif"></td>
+                                            <td width="120"><img width="100" height="100" onclick="if(this.src.indexOf('waitpic.gif') == -1){_preview(Dd('showthumb2').src, 1);}else{Dalbum(2,6,100,100, Dd('thumb2').value, true);}" alt="" title="预览图片" id="showthumb2" src="http://shicaicheng.gotoip55.com/skin/default/image/waitpic.gif"></td>
+                                        </tr>
+                                        <tr align="center" class="c_p">
+                                            <td><img width="12" height="12" onclick="Dalbum('',6,100,100, Dd('thumb').value, true);" title="上传" src="http://shicaicheng.gotoip55.com/member/image/img_upload.gif">&nbsp;&nbsp;<img width="12" height="12" onclick="selAlbum('');" title="选择" src="http://shicaicheng.gotoip55.com/member/image/img_select.gif">&nbsp;&nbsp;<img width="12" height="12" onclick="delAlbum('','wait');" title="删除" src="http://shicaicheng.gotoip55.com/member/image/img_delete.gif"></td>
+                                            <td><img width="12" height="12" onclick="Dalbum(1,6,100,100, Dd('thumb1').value, true);" title="上传" src="http://shicaicheng.gotoip55.com/member/image/img_upload.gif">&nbsp;&nbsp;<img width="12" height="12" onclick="selAlbum(1);" title="选择" src="http://shicaicheng.gotoip55.com/member/image/img_select.gif">&nbsp;&nbsp;<img width="12" height="12" onclick="delAlbum(1,'wait');" title="删除" src="http://shicaicheng.gotoip55.com/member/image/img_delete.gif"></td>
+                                            <td><img width="12" height="12" onclick="Dalbum(2,6,100,100, Dd('thumb2').value, true);" title="上传" src="http://shicaicheng.gotoip55.com/member/image/img_upload.gif">&nbsp;&nbsp;<img width="12" height="12" onclick="selAlbum(2);" title="选择" src="http://shicaicheng.gotoip55.com/member/image/img_select.gif">&nbsp;&nbsp;<img width="12" height="12" onclick="delAlbum(2,'wait');" title="删除" src="http://shicaicheng.gotoip55.com/member/image/img_delete.gif"></td>
+                                        </tr>
+                                        </tbody></table>
+                                    <span class="f_red" id="dthumb"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tl">过期时间</td>
+                                <td class="tr f_gray"><script src="http://shicaicheng.gotoip55.com/file/script/calendar.js" type="text/javascript"></script><input type="text" ondblclick="this.value='';" readonly="" onfocus="ca_show('posttotime', this, '-');" size="10" value="" id="posttotime" name="post[totime]"> <img align="absmiddle" style="cursor:pointer;" onclick="ca_show('posttotime', this, '-');" src="http://shicaicheng.gotoip55.com/file/image/calendar.gif">&nbsp;
+                                    <select onchange="Dd('posttotime').value=this.value;">
+                                        <option value="">快捷选择</option>
+                                        <option value="">长期有效</option>
+                                        <option value="2016-09-10">3天</option>
+                                        <option value="2016-09-14">一周</option>
+                                        <option value="2016-09-22">半月</option>
+                                        <option value="2016-10-07">一月</option>
+                                        <option value="2017-03-08">半年</option>
+                                        <option value="2017-09-07">一年</option>
+                                    </select>&nbsp;
+                                    不选表示长期有效
+                                    <span class="f_red" id="dposttotime"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="tl">报价方式</td>
+                                <td class="tr nv">
+                                    <table cellspacing="1">
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" id="n1" value="" size="10" name="post[n1]"></td>
+                                                <td><input type="text" id="v1" value="" size="20" name="post[v1]"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" id="n2" value="" size="10" name="post[n2]"></td>
+                                                <td><input type="text" id="v2" value="" size="20" name="post[v2]"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" id="n3" value="" size="10" name="post[n3]"></td>
+                                                <td><input type="text" id="v3" value="" size="20" name="post[v3]"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="f_gray">例如：规格</td>
+                                                <td class="f_gray">例如：10cm*20cm</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tl">&nbsp;</td>
+                                <td height="50" class="tr">
+                                    <input type="submit" class="btn_g" value=" 提 交 " name="submit">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="button" onclick="history.back(-1);" class="btn" value=" 返 回 "></td>
+                            </tr>
+                            </tbody></table>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane  " id="listPanel">
+                <div class="detailContent">
+                    <div class="searchColumn">
+                        <form action="?">
+                            <input type="hidden" value="6" name="mid">
+                            <input type="hidden" value="3" name="status">
+                            &nbsp;<select id="catid_1" name="catid"><option value="0">行业分类</option><option value="433">荒料板材 </option><option value="440">&nbsp;├大理石</option><option value="439">&nbsp;├花岗岩</option><option value="467">&nbsp;├砂岩</option><option value="468">&nbsp;├青石/玄武岩</option><option value="441">&nbsp;├板岩</option><option value="469">&nbsp;├人造/合成石</option><option value="470">&nbsp;├微晶石</option><option value="471">&nbsp;└其他</option><option value="434">环境装饰</option><option value="442">&nbsp;├地铺</option><option value="443">&nbsp;├路沿石</option><option value="444">&nbsp;├台阶石</option><option value="445">&nbsp;├小方块</option><option value="472">&nbsp;├玉石</option><option value="473">&nbsp;├仿古石</option><option value="474">&nbsp;├车前石</option><option value="475">&nbsp;├卵石</option><option value="476">&nbsp;├盲人石</option><option value="477">&nbsp;├园艺石/花钵</option><option value="478">&nbsp;├景观石</option><option value="479">&nbsp;├蘑菇石</option><option value="480">&nbsp;├文化石</option><option value="481">&nbsp;├广场砖</option><option value="482">&nbsp;├自然奇石</option><option value="483">&nbsp;├网粘乱型</option><option value="484">&nbsp;├石英</option><option value="485">&nbsp;├石灰石</option><option value="486">&nbsp;└卵石/砂石</option><option value="436">石材家具</option><option value="451">&nbsp;├台面板</option><option value="452">&nbsp;├洗面台</option><option value="453">&nbsp;├吧台</option><option value="454">&nbsp;├桌面</option><option value="455">&nbsp;├石桌石椅</option><option value="487">&nbsp;├沐浴盆</option><option value="488">&nbsp;├脸盆</option><option value="489">&nbsp;├茶几</option><option value="490">&nbsp;└其它</option><option value="437">异形工艺</option><option value="456">&nbsp;├风水球/壁炉/喷水池</option><option value="457">&nbsp;├门/窗套/扶手</option><option value="458">&nbsp;├柱(龙柱)及各类异形柱、配套</option><option value="459">&nbsp;├洗手盆</option><option value="460">&nbsp;└灯笼/塔</option><option value="435">养护辅料</option><option value="446">&nbsp;├清洗清除剂</option><option value="447">&nbsp;├除锈剂</option><option value="448">&nbsp;├防滑仿古处理剂</option><option value="449">&nbsp;├石材防护/保养剂</option><option value="450">&nbsp;├抛光剂</option><option value="491">&nbsp;├着色剂</option><option value="492">&nbsp;└粘胶剂</option><option value="438">石材机械</option><option value="461">&nbsp;├人造石生产设备</option><option value="462">&nbsp;├抛光磨光设备</option><option value="463">&nbsp;├喷砂设备</option><option value="464">&nbsp;├切割定厚设备</option><option value="493">&nbsp;├压边/清角/倒角/修边机械</option><option value="494">&nbsp;├金刚石单晶、微粉</option><option value="495">&nbsp;├磨料磨具</option><option value="496">&nbsp;├仿形成型机械刀头</option><option value="497">&nbsp;├雕塑工具</option><option value="498">&nbsp;├金刚石锯片</option><option value="499">&nbsp;├磨盘</option><option value="500">&nbsp;├砂轮</option><option value="501">&nbsp;└金刚石磨头/钻头</option></select>&nbsp;
+                            <select name="typeid"><option value="">信息类型</option><option value="0">求购</option><option value="1">紧急求购</option><option value="2">求购二手</option><option value="3">寻求加工</option><option value="4">寻求合作</option><option value="5">招标</option></select>&nbsp;
+                            <input type="text" title="关键词" value="" name="kw" size="50">&nbsp;
+                            <input type="submit" class="btn" value=" 搜 索 ">
+                            <input type="button" onclick="Go('?mid=6&amp;status=3');" class="btn" value=" 重 置 ">
+                        </form>
+                    </div>
+                    <div class="ls">
+                        <form method="post">
+                            <table cellspacing="0" cellpadding="0" class="tb">
+                                <tbody><tr>
+                                    <th width="20"><input type="checkbox" onclick="checkall(this.form);"></th>
+                                    <th>标 题</th>
+                                    <th>行 业</th>
+                                    <th>报价</th>
+                                    <th>发布时间</th>
+                                    <th>更新时间</th>
+                                    <th>结束时间</th>
+                                    <th>浏览</th>
+                                    <th width="80">管理</th>
+                                </tr>
+                                <tr align="center" onmouseout="this.className='';" onmouseover="this.className='on';" class="">
+                                    <td><input type="checkbox" value="30" name="itemid[]"></td>
+                                    <td  title="fsdfdsf">&nbsp;<a class="t" target="_blank" href="http://shicaicheng.gotoip55.com/buy/show.php?itemid=30">fsdfdsf</a></td>
+                                    <td><a target="_blank" href="http://shicaicheng.gotoip55.com/buy/list.php?catid=493">压边/清角/倒角/修边机械</a></td>
+                                    <td title="报价" class="f_gray px11">2016</td>
+                                    <td title="发布时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td title="更新时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td title="结束时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td class="f_gray px11">86</td>
+                                    <td>
+                                        <a href="?mid=6&amp;action=edit&amp;itemid=30"><img width="16" height="16" alt="" title="修改" src="http://shicaicheng.gotoip55.com/member/image/edit.png"></a>
+                                        &nbsp;<a href="?mid=6&amp;action=add&amp;itemid=30&amp;catid=493"><img width="16" height="16" alt="" title="复制信息" src="http://shicaicheng.gotoip55.com/member/image/new.png"></a>&nbsp;<a onclick="return confirm('确定要删除吗？此操作将不可撤销');" href="?mid=6&amp;action=delete&amp;itemid=30"><img width="16" height="16" alt="" title="删除" src="http://shicaicheng.gotoip55.com/member/image/delete.png"></a></td>
+                                </tr>
+                                </tbody></table>
+                        </form>
+                    </div>
+                    <div class="btns">
+                        <span class="f_r"><input type="submit" onclick="if(confirm('确定要删除选中求购吗？')){this.form.action='?mid=6&amp;status=3&amp;action=delete'}else{return false;}" class="btn" value=" 删除选中 "></span>
+                        <input type="submit" onclick="this.form.action='?mid=6&amp;status=3&amp;action=refresh';" class="btn" value=" 刷新选中 ">
+                        刷新一条信息一次需消费 <strong class="f_red">1</strong> 积分，当积分不足时将不可刷新
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane  " id="penddingPanel">
+                <div class="detailContent">
+                    <div class="searchColumn">
+                        <form action="?">
+                            <input type="hidden" value="6" name="mid">
+                            <input type="hidden" value="3" name="status">
+                            &nbsp;<select id="catid_1" name="catid"><option value="0">行业分类</option><option value="433">荒料板材 </option><option value="440">&nbsp;├大理石</option><option value="439">&nbsp;├花岗岩</option><option value="467">&nbsp;├砂岩</option><option value="468">&nbsp;├青石/玄武岩</option><option value="441">&nbsp;├板岩</option><option value="469">&nbsp;├人造/合成石</option><option value="470">&nbsp;├微晶石</option><option value="471">&nbsp;└其他</option><option value="434">环境装饰</option><option value="442">&nbsp;├地铺</option><option value="443">&nbsp;├路沿石</option><option value="444">&nbsp;├台阶石</option><option value="445">&nbsp;├小方块</option><option value="472">&nbsp;├玉石</option><option value="473">&nbsp;├仿古石</option><option value="474">&nbsp;├车前石</option><option value="475">&nbsp;├卵石</option><option value="476">&nbsp;├盲人石</option><option value="477">&nbsp;├园艺石/花钵</option><option value="478">&nbsp;├景观石</option><option value="479">&nbsp;├蘑菇石</option><option value="480">&nbsp;├文化石</option><option value="481">&nbsp;├广场砖</option><option value="482">&nbsp;├自然奇石</option><option value="483">&nbsp;├网粘乱型</option><option value="484">&nbsp;├石英</option><option value="485">&nbsp;├石灰石</option><option value="486">&nbsp;└卵石/砂石</option><option value="436">石材家具</option><option value="451">&nbsp;├台面板</option><option value="452">&nbsp;├洗面台</option><option value="453">&nbsp;├吧台</option><option value="454">&nbsp;├桌面</option><option value="455">&nbsp;├石桌石椅</option><option value="487">&nbsp;├沐浴盆</option><option value="488">&nbsp;├脸盆</option><option value="489">&nbsp;├茶几</option><option value="490">&nbsp;└其它</option><option value="437">异形工艺</option><option value="456">&nbsp;├风水球/壁炉/喷水池</option><option value="457">&nbsp;├门/窗套/扶手</option><option value="458">&nbsp;├柱(龙柱)及各类异形柱、配套</option><option value="459">&nbsp;├洗手盆</option><option value="460">&nbsp;└灯笼/塔</option><option value="435">养护辅料</option><option value="446">&nbsp;├清洗清除剂</option><option value="447">&nbsp;├除锈剂</option><option value="448">&nbsp;├防滑仿古处理剂</option><option value="449">&nbsp;├石材防护/保养剂</option><option value="450">&nbsp;├抛光剂</option><option value="491">&nbsp;├着色剂</option><option value="492">&nbsp;└粘胶剂</option><option value="438">石材机械</option><option value="461">&nbsp;├人造石生产设备</option><option value="462">&nbsp;├抛光磨光设备</option><option value="463">&nbsp;├喷砂设备</option><option value="464">&nbsp;├切割定厚设备</option><option value="493">&nbsp;├压边/清角/倒角/修边机械</option><option value="494">&nbsp;├金刚石单晶、微粉</option><option value="495">&nbsp;├磨料磨具</option><option value="496">&nbsp;├仿形成型机械刀头</option><option value="497">&nbsp;├雕塑工具</option><option value="498">&nbsp;├金刚石锯片</option><option value="499">&nbsp;├磨盘</option><option value="500">&nbsp;├砂轮</option><option value="501">&nbsp;└金刚石磨头/钻头</option></select>&nbsp;
+                            <select name="typeid"><option value="">信息类型</option><option value="0">求购</option><option value="1">紧急求购</option><option value="2">求购二手</option><option value="3">寻求加工</option><option value="4">寻求合作</option><option value="5">招标</option></select>&nbsp;
+                            <input type="text" title="关键词" value="" name="kw" size="50">&nbsp;
+                            <input type="submit" class="btn" value=" 搜 索 ">
+                            <input type="button" onclick="Go('?mid=6&amp;status=3');" class="btn" value=" 重 置 ">
+                        </form>
+                    </div>
+                    <div class="ls">
+                        <form method="post">
+                            <table cellspacing="0" cellpadding="0" class="tb">
+                                <tbody><tr>
+                                    <th width="20"><input type="checkbox" onclick="checkall(this.form);"></th>
+                                    <th>标 题</th>
+                                    <th>行 业</th>
+                                    <th>报价</th>
+                                    <th>发布时间</th>
+                                    <th>结束时间</th>
+                                    <th width="80">管理</th>
+                                </tr>
+                                <tr align="center" onmouseout="this.className='';" onmouseover="this.className='on';" class="">
+                                    <td><input type="checkbox" value="30" name="itemid[]"></td>
+                                    <td align="left" title="fsdfdsf">&nbsp;<a class="t" target="_blank" href="http://shicaicheng.gotoip55.com/buy/show.php?itemid=30">fsdfdsf</a></td>
+                                    <td><a target="_blank" href="http://shicaicheng.gotoip55.com/buy/list.php?catid=493">压边/清角/倒角/修边机械</a></td>
+                                    <td title="报价" class="f_gray px11">2016</td>
+                                    <td title="发布时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td title="结束时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td>
+                                        <a href="?mid=6&amp;action=edit&amp;itemid=30"><img width="16" height="16" alt="" title="修改" src="http://shicaicheng.gotoip55.com/member/image/edit.png"></a>
+                                        &nbsp;<a href="?mid=6&amp;action=add&amp;itemid=30&amp;catid=493"><img width="16" height="16" alt="" title="复制信息" src="http://shicaicheng.gotoip55.com/member/image/new.png"></a>&nbsp;<a onclick="return confirm('确定要删除吗？此操作将不可撤销');" href="?mid=6&amp;action=delete&amp;itemid=30"><img width="16" height="16" alt="" title="删除" src="http://shicaicheng.gotoip55.com/member/image/delete.png"></a></td>
+                                </tr>
+                                </tbody></table>
+                        </form>
+                    </div>
+                    <div class="btns">
+                        <span class="f_r"><input type="submit" onclick="if(confirm('确定要删除选中求购吗？')){this.form.action='?mid=6&amp;status=3&amp;action=delete'}else{return false;}" class="btn" value=" 删除选中 "></span>
+                        <input type="submit" onclick="this.form.action='?mid=6&amp;status=3&amp;action=refresh';" class="btn" value=" 刷新选中 ">
+                        刷新一条信息一次需消费 <strong class="f_red">1</strong> 积分，当积分不足时将不可刷新
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane  " id="unPenddingPanel">
+                <div class="detailContent">
+                    <div class="searchColumn">
+                        <form action="?">
+                            <input type="hidden" value="6" name="mid">
+                            <input type="hidden" value="3" name="status">
+                            &nbsp;<select id="catid_1" name="catid"><option value="0">行业分类</option><option value="433">荒料板材 </option><option value="440">&nbsp;├大理石</option><option value="439">&nbsp;├花岗岩</option><option value="467">&nbsp;├砂岩</option><option value="468">&nbsp;├青石/玄武岩</option><option value="441">&nbsp;├板岩</option><option value="469">&nbsp;├人造/合成石</option><option value="470">&nbsp;├微晶石</option><option value="471">&nbsp;└其他</option><option value="434">环境装饰</option><option value="442">&nbsp;├地铺</option><option value="443">&nbsp;├路沿石</option><option value="444">&nbsp;├台阶石</option><option value="445">&nbsp;├小方块</option><option value="472">&nbsp;├玉石</option><option value="473">&nbsp;├仿古石</option><option value="474">&nbsp;├车前石</option><option value="475">&nbsp;├卵石</option><option value="476">&nbsp;├盲人石</option><option value="477">&nbsp;├园艺石/花钵</option><option value="478">&nbsp;├景观石</option><option value="479">&nbsp;├蘑菇石</option><option value="480">&nbsp;├文化石</option><option value="481">&nbsp;├广场砖</option><option value="482">&nbsp;├自然奇石</option><option value="483">&nbsp;├网粘乱型</option><option value="484">&nbsp;├石英</option><option value="485">&nbsp;├石灰石</option><option value="486">&nbsp;└卵石/砂石</option><option value="436">石材家具</option><option value="451">&nbsp;├台面板</option><option value="452">&nbsp;├洗面台</option><option value="453">&nbsp;├吧台</option><option value="454">&nbsp;├桌面</option><option value="455">&nbsp;├石桌石椅</option><option value="487">&nbsp;├沐浴盆</option><option value="488">&nbsp;├脸盆</option><option value="489">&nbsp;├茶几</option><option value="490">&nbsp;└其它</option><option value="437">异形工艺</option><option value="456">&nbsp;├风水球/壁炉/喷水池</option><option value="457">&nbsp;├门/窗套/扶手</option><option value="458">&nbsp;├柱(龙柱)及各类异形柱、配套</option><option value="459">&nbsp;├洗手盆</option><option value="460">&nbsp;└灯笼/塔</option><option value="435">养护辅料</option><option value="446">&nbsp;├清洗清除剂</option><option value="447">&nbsp;├除锈剂</option><option value="448">&nbsp;├防滑仿古处理剂</option><option value="449">&nbsp;├石材防护/保养剂</option><option value="450">&nbsp;├抛光剂</option><option value="491">&nbsp;├着色剂</option><option value="492">&nbsp;└粘胶剂</option><option value="438">石材机械</option><option value="461">&nbsp;├人造石生产设备</option><option value="462">&nbsp;├抛光磨光设备</option><option value="463">&nbsp;├喷砂设备</option><option value="464">&nbsp;├切割定厚设备</option><option value="493">&nbsp;├压边/清角/倒角/修边机械</option><option value="494">&nbsp;├金刚石单晶、微粉</option><option value="495">&nbsp;├磨料磨具</option><option value="496">&nbsp;├仿形成型机械刀头</option><option value="497">&nbsp;├雕塑工具</option><option value="498">&nbsp;├金刚石锯片</option><option value="499">&nbsp;├磨盘</option><option value="500">&nbsp;├砂轮</option><option value="501">&nbsp;└金刚石磨头/钻头</option></select>&nbsp;
+                            <select name="typeid"><option value="">信息类型</option><option value="0">求购</option><option value="1">紧急求购</option><option value="2">求购二手</option><option value="3">寻求加工</option><option value="4">寻求合作</option><option value="5">招标</option></select>&nbsp;
+                            <input type="text" title="关键词" value="" name="kw" size="50">&nbsp;
+                            <input type="submit" class="btn" value=" 搜 索 ">
+                            <input type="button" onclick="Go('?mid=6&amp;status=3');" class="btn" value=" 重 置 ">
+                        </form>
+                    </div>
+                    <div class="ls">
+                        <form method="post">
+                            <table cellspacing="0" cellpadding="0" class="tb">
+                                <tbody><tr>
+                                    <th width="20"><input type="checkbox" onclick="checkall(this.form);"></th>
+                                    <th>标 题</th>
+                                    <th>行 业</th>
+                                    <th>报价</th>
+                                    <th>发布时间</th>
+                                    <th>结束时间</th>
+                                    <th width="80">管理</th>
+                                </tr>
+                                <tr align="center" onmouseout="this.className='';" onmouseover="this.className='on';" class="">
+                                    <td><input type="checkbox" value="30" name="itemid[]"></td>
+                                    <td  title="fsdfdsf">&nbsp;<a class="t" target="_blank" href="http://shicaicheng.gotoip55.com/buy/show.php?itemid=30">fsdfdsf</a></td>
+                                    <td><a target="_blank" href="http://shicaicheng.gotoip55.com/buy/list.php?catid=493">压边/清角/倒角/修边机械</a></td>
+                                    <td title="报价" class="f_gray px11">2016</td>
+                                    <td title="发布时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td title="结束时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td>
+                                        <a href="?mid=6&amp;action=edit&amp;itemid=30"><img width="16" height="16" alt="" title="修改" src="http://shicaicheng.gotoip55.com/member/image/edit.png"></a>
+                                        &nbsp;<a href="?mid=6&amp;action=add&amp;itemid=30&amp;catid=493"><img width="16" height="16" alt="" title="复制信息" src="http://shicaicheng.gotoip55.com/member/image/new.png"></a>&nbsp;<a onclick="return confirm('确定要删除吗？此操作将不可撤销');" href="?mid=6&amp;action=delete&amp;itemid=30"><img width="16" height="16" alt="" title="删除" src="http://shicaicheng.gotoip55.com/member/image/delete.png"></a></td>
+                                </tr>
+                                </tbody></table>
+                        </form>
+                    </div>
+                    <div class="btns">
+                        <span class="f_r"><input type="submit" onclick="if(confirm('确定要删除选中求购吗？')){this.form.action='?mid=6&amp;status=3&amp;action=delete'}else{return false;}" class="btn" value=" 删除选中 "></span>
+                        <input type="submit" onclick="this.form.action='?mid=6&amp;status=3&amp;action=refresh';" class="btn" value=" 刷新选中 ">
+                        刷新一条信息一次需消费 <strong class="f_red">1</strong> 积分，当积分不足时将不可刷新
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane  active" id="offlinePanel">
+                <div class="detailContent">
+                    <div class="searchColumn">
+                        <form action="?">
+                            <input type="hidden" value="6" name="mid">
+                            <input type="hidden" value="3" name="status">
+                            &nbsp;<select id="catid_1" name="catid"><option value="0">行业分类</option><option value="433">荒料板材 </option><option value="440">&nbsp;├大理石</option><option value="439">&nbsp;├花岗岩</option><option value="467">&nbsp;├砂岩</option><option value="468">&nbsp;├青石/玄武岩</option><option value="441">&nbsp;├板岩</option><option value="469">&nbsp;├人造/合成石</option><option value="470">&nbsp;├微晶石</option><option value="471">&nbsp;└其他</option><option value="434">环境装饰</option><option value="442">&nbsp;├地铺</option><option value="443">&nbsp;├路沿石</option><option value="444">&nbsp;├台阶石</option><option value="445">&nbsp;├小方块</option><option value="472">&nbsp;├玉石</option><option value="473">&nbsp;├仿古石</option><option value="474">&nbsp;├车前石</option><option value="475">&nbsp;├卵石</option><option value="476">&nbsp;├盲人石</option><option value="477">&nbsp;├园艺石/花钵</option><option value="478">&nbsp;├景观石</option><option value="479">&nbsp;├蘑菇石</option><option value="480">&nbsp;├文化石</option><option value="481">&nbsp;├广场砖</option><option value="482">&nbsp;├自然奇石</option><option value="483">&nbsp;├网粘乱型</option><option value="484">&nbsp;├石英</option><option value="485">&nbsp;├石灰石</option><option value="486">&nbsp;└卵石/砂石</option><option value="436">石材家具</option><option value="451">&nbsp;├台面板</option><option value="452">&nbsp;├洗面台</option><option value="453">&nbsp;├吧台</option><option value="454">&nbsp;├桌面</option><option value="455">&nbsp;├石桌石椅</option><option value="487">&nbsp;├沐浴盆</option><option value="488">&nbsp;├脸盆</option><option value="489">&nbsp;├茶几</option><option value="490">&nbsp;└其它</option><option value="437">异形工艺</option><option value="456">&nbsp;├风水球/壁炉/喷水池</option><option value="457">&nbsp;├门/窗套/扶手</option><option value="458">&nbsp;├柱(龙柱)及各类异形柱、配套</option><option value="459">&nbsp;├洗手盆</option><option value="460">&nbsp;└灯笼/塔</option><option value="435">养护辅料</option><option value="446">&nbsp;├清洗清除剂</option><option value="447">&nbsp;├除锈剂</option><option value="448">&nbsp;├防滑仿古处理剂</option><option value="449">&nbsp;├石材防护/保养剂</option><option value="450">&nbsp;├抛光剂</option><option value="491">&nbsp;├着色剂</option><option value="492">&nbsp;└粘胶剂</option><option value="438">石材机械</option><option value="461">&nbsp;├人造石生产设备</option><option value="462">&nbsp;├抛光磨光设备</option><option value="463">&nbsp;├喷砂设备</option><option value="464">&nbsp;├切割定厚设备</option><option value="493">&nbsp;├压边/清角/倒角/修边机械</option><option value="494">&nbsp;├金刚石单晶、微粉</option><option value="495">&nbsp;├磨料磨具</option><option value="496">&nbsp;├仿形成型机械刀头</option><option value="497">&nbsp;├雕塑工具</option><option value="498">&nbsp;├金刚石锯片</option><option value="499">&nbsp;├磨盘</option><option value="500">&nbsp;├砂轮</option><option value="501">&nbsp;└金刚石磨头/钻头</option></select>&nbsp;
+                            <select name="typeid"><option value="">信息类型</option><option value="0">求购</option><option value="1">紧急求购</option><option value="2">求购二手</option><option value="3">寻求加工</option><option value="4">寻求合作</option><option value="5">招标</option></select>&nbsp;
+                            <input type="text" title="关键词" value="" name="kw" size="50">&nbsp;
+                            <input type="submit" class="btn" value=" 搜 索 ">
+                            <input type="button" onclick="Go('?mid=6&amp;status=3');" class="btn" value=" 重 置 ">
+                        </form>
+                    </div>
+                    <div class="ls">
+                        <form method="post">
+                            <table cellspacing="0" cellpadding="0" class="tb">
+                                <tbody><tr>
+                                    <th width="20"><input type="checkbox" onclick="checkall(this.form);"></th>
+                                    <th>标 题</th>
+                                    <th>行 业</th>
+                                    <th>报价</th>
+                                    <th>发布时间</th>
+                                    <th>结束时间</th>
+                                    <th>浏览</th>
+                                    <th width="80">管理</th>
+                                </tr>
+                                <tr align="center" onmouseout="this.className='';" onmouseover="this.className='on';" class="">
+                                    <td><input type="checkbox" value="30" name="itemid[]"></td>
+                                    <td  title="fsdfdsf">&nbsp;<a class="t" target="_blank" href="http://shicaicheng.gotoip55.com/buy/show.php?itemid=30">fsdfdsf</a></td>
+                                    <td><a target="_blank" href="http://shicaicheng.gotoip55.com/buy/list.php?catid=493">压边/清角/倒角/修边机械</a></td>
+                                    <td title="报价" class="f_gray px11">2016</td>
+                                    <td title="发布时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td title="结束时间 2016-07-20 10:47" class="f_gray px11">2016-07-27 09:58</td>
+                                    <td class="f_gray px11">86</td>
+                                    <td>
+                                        <a href="?mid=6&amp;action=edit&amp;itemid=30"><img width="16" height="16" alt="" title="修改" src="http://shicaicheng.gotoip55.com/member/image/edit.png"></a>
+                                        &nbsp;<a href="?mid=6&amp;action=add&amp;itemid=30&amp;catid=493"><img width="16" height="16" alt="" title="复制信息" src="http://shicaicheng.gotoip55.com/member/image/new.png"></a>&nbsp;<a onclick="return confirm('确定要删除吗？此操作将不可撤销');" href="?mid=6&amp;action=delete&amp;itemid=30"><img width="16" height="16" alt="" title="删除" src="http://shicaicheng.gotoip55.com/member/image/delete.png"></a></td>
+                                </tr>
+                                </tbody></table>
+                        </form>
+                    </div>
+                    <div class="btns">
+                        <span class="f_r"><input type="submit" onclick="if(confirm('确定要删除选中求购吗？')){this.form.action='?mid=6&amp;status=3&amp;action=delete'}else{return false;}" class="btn" value=" 删除选中 "></span>
+                        <input type="submit" onclick="this.form.action='?mid=6&amp;status=3&amp;action=refresh';" class="btn" value=" 刷新选中 ">
+                        刷新一条信息一次需消费 <strong class="f_red">1</strong> 积分，当积分不足时将不可刷新
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    $(function(){
+        var totalCount=300,showCount = 32,limit = 10;
+        $('.pagerContainer').extendPagination({
+            totalCount: totalCount,
+            showCount: showCount,
+            limit: limit,
+            callback: function (curr, limit, totalCount) {
+                createTable(curr, limit, totalCount);
+            }
+        });
+
+    });
+</script>
+</html>

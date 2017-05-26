@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宁波石材网---产品求购</title>
+    <link rel="stylesheet" type="text/css" href="../../../public/css/bootstrap.css">
+    <script type="text/javascript" src="../../../public/js/jquery.js"></script>
+    <script type="text/javascript" src="../../../public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../public/js/extendPagination.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../../public/css/basePurchase.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/publicCommon.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/reset.css">
+</head>
+<body>
+<!--顶部TOP-->
+<div class="headerTop w100">
+    <div class="topContainer containerCenter">
+        <div class="top-left">
+            <span>欢迎来到<a href="Index.html" target="_self" >宁波石材网</a></span>
+            <a href="" target="_blank">登录</a>
+            |
+            <a href="" target="_blank">注册</a>
+        </div>
+        <div class="top-right">
+            <a href="" target="_blank">会员中心</a>|
+            <a href="" target="_blank">帮助中心</a>|
+            <span>客服热线:0574-87654321</span>
+        </div>
+    </div>
+</div>
+<!--头部LOGO+搜索框-->
+<div class="headerSearch w100">
+    <div class="searchContainer containerCenter">
+        <div class="leftLogo">
+            <a href="Index.html" target="_self"><img src="../../../public/images/siteLogo.png"></a>
+        </div>
+        <div class="rightSearch">
+            <div class="dropdown searchSelect">
+                <div class="dropdown-toggle selectBox" data-toggle="dropdown" >
+                    供应<span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0);" >供应</a></li>
+                    <li  class="divider"></li>
+                    <li><a href="javascript:void(0);" >求购</a></li>
+                    <li class="divider"></li>
+                    <li><a href="javascript:void(0);"  >商家</a></li>
+                </ul>
+            </div>
+            <input placeholder="请输入关键词" class="keyInput">
+            <button class="searchBtn" id="keySearch">搜索</button>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<div class="nav-layout w100">
+    <div class="navContainer containerCenter">
+        <div class="allCategory">
+            <a href="#">产品分类</a>
+            <!--弹出产品类别栏-->
+            <div class="categoryList " style="display: none">
+                <ul>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="大理石">大理石</p></a>
+                            <p class="smallCategory">
+                                <span><a title="大板" href="#">大板</a></span>
+                                <span><a title="规格板" href="#">规格板</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="花岗岩">花岗岩</p></a>
+                            <p class="smallCategory">
+                                <span><a title="毛板" href="#">毛板</a></span>
+                                <span><a title="条板" href="#">条板</a></span>
+                                <span><a title="规格板" href="#">规格板</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="环境装饰">环境装饰</p></a>
+                            <p class="smallCategory">
+                                <span><a title="庭院产品" href="">庭院产品</a></span>
+                                <span><a title="环境石材" href="#">环境石材</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--<span><a title="大板" href="#">大板</a></span>-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="家居工艺">家居工艺</p></a>
+                            <p class="smallCategory">
+                                <span><a title="家具" href="#">家具</a></span>
+                                <span><a title="石工艺品" href="#">石工艺品</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="石材配套">石材配套</p></a>
+                            <p class="smallCategory">
+                                <span><a title="机械工具" href="#">机械工具</a></span>
+                                <span><a title="养护辅料" href="#">养护辅料</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--弹出产品类别栏End-->
+
+        </div>
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="Index.html">首页</a></li>
+            <li><a href="productsSearch.html">供应</a></li>
+            <li class="active"><a href="productsPurchase.html">求购</a></li>
+            <li><a href="companySearch.html">商家</a></li>
+            <li><a href="#">资讯</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<!--内容块-->
+<div class="containerCenter clearfix">
+    <div class="searchArea">
+        <div class="filterArea">
+            <p>首页 > 供应 > 大理石</p>
+            <div class="filterContainer">
+                <dl class="xgt_st_dl ">
+                    <dt>
+                        类型:
+                    </dt>
+                    <dd>
+                        <a rel="nofollow" class="on" href="#">全部</a>
+                        <a rel="nofollow" href="productsSearch.html">大理石</a>
+                        <a rel="nofollow" href="productsSearch.html">花岗岩</a>
+                        <a rel="nofollow" href="productsSearch.html">庭院产品</a>
+                        <a rel="nofollow" href="productsSearch.html">环境石材</a>
+                        <a rel="nofollow" href="productsSearch.html">室内装饰</a>
+                        <a rel="nofollow" href="productsSearch.html">石工艺品</a>
+                        <a rel="nofollow" href="productsSearch.html">机械工具</a>
+                        <a rel="nofollow" href="productsSearch.html">养护辅料</a>
+                    </dd>
+                </dl>
+                <dl class="xgt_st_dl ">
+                    <dt>
+                        筛选条件:
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li>类型：大理石&nbsp;&nbsp;&nbsp;&nbsp;X</li>
+                            <li>用途：大板&nbsp;&nbsp;&nbsp;&nbsp;X</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="sortBoard">
+                <a data-ptag="1_2_3_214" class="on" href="#" rel="nofollow">最新</a>
+            </div>
+        </div>
+
+        <div class="productResultsList">
+            <div class="container" style="width: 100%">
+                <div class="row row-active">
+                    <div class="col-md-12 clearfix">
+                        <div class="purchaseInfo">
+                            <p class="title-active">
+                                求购有处理的黑金沙花岗岩
+                            </p>
+                            <p >价格：<sapn class="priceShow">面议</sapn></p>
+                            <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                            <ul class="purchaseImgs">
+                                <li>参考图片：</li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                            </ul>
+                        </div>
+                        <div class="statusContainer clearfix">
+                            <a class="status-active" href="javascript:void(0);">报价中</a>
+                            <p class="statusDate">
+                                截止时间：2016年06月30日
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-close">
+                    <div class="col-md-12 clearfix">
+                        <div class="purchaseInfo">
+                            <p class="title-close">
+                                求购有处理的黑金沙花岗岩
+                            </p>
+                            <p >价格：<sapn class="priceShow">面议</sapn></p>
+                            <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                            <ul class="purchaseImgs">
+                                <li>参考图片：</li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                            </ul>
+                        </div>
+                        <div class="statusContainer clearfix">
+                            <a class="status-close" href="javascript:void(0);">交易结束</a>
+                            <p class="statusDate" style="display: none">
+                                截止时间：2016年06月30日
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-active">
+                    <div class="col-md-12 clearfix">
+                        <div class="purchaseInfo">
+                            <p class="title-active">
+                                求购有处理的黑金沙花岗岩
+                            </p>
+                            <p >价格：<sapn class="priceShow">面议</sapn></p>
+                            <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                            <ul class="purchaseImgs">
+                                <li>参考图片：</li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                            </ul>
+                        </div>
+                        <div class="statusContainer clearfix">
+                            <a class="status-active" href="javascript:void(0);">报价中</a>
+                            <p class="statusDate">
+                                截止时间：2016年06月30日
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-active">
+                    <div class="col-md-12 clearfix">
+                        <div class="purchaseInfo">
+                            <p class="title-active">
+                                求购有处理的黑金沙花岗岩
+                            </p>
+                            <p >价格：<sapn class="priceShow">面议</sapn></p>
+                            <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                            <ul class="purchaseImgs">
+                                <li>参考图片：</li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                            </ul>
+                        </div>
+                        <div class="statusContainer clearfix">
+                            <a class="status-active" href="javascript:void(0);">报价中</a>
+                            <p class="statusDate">
+                                截止时间：2016年06月30日
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-close">
+                    <div class="col-md-12 clearfix">
+                        <div class="purchaseInfo">
+                            <p class="title-close">
+                                求购有处理的黑金沙花岗岩
+                            </p>
+                            <p >价格：<sapn class="priceShow">面议</sapn></p>
+                            <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                            <ul class="purchaseImgs">
+                                <li>参考图片：</li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                            </ul>
+                        </div>
+                        <div class="statusContainer clearfix">
+                            <a class="status-close" href="javascript:void(0);">交易结束</a>
+                            <p class="statusDate" style="display: none">
+                                截止时间：2016年06月30日
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-active">
+                    <div class="col-md-12 clearfix">
+                        <div class="purchaseInfo">
+                            <p class="title-active">
+                                求购有处理的黑金沙花岗岩
+                            </p>
+                            <p >价格：<sapn class="priceShow">面议</sapn></p>
+                            <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                            <ul class="purchaseImgs">
+                                <li>参考图片：</li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                            </ul>
+                        </div>
+                        <div class="statusContainer clearfix">
+                            <a class="status-active" href="javascript:void(0);">报价中</a>
+                            <p class="statusDate">
+                                截止时间：2016年06月30日
+                            </p>
+                        </div>
+                    </div>
+                </div><div class="row row-active">
+                <div class="col-md-12 clearfix">
+                    <div class="purchaseInfo">
+                        <p class="title-active">
+                            求购有处理的黑金沙花岗岩
+                        </p>
+                        <p >价格：<sapn class="priceShow">面议</sapn></p>
+                        <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                        <ul class="purchaseImgs">
+                            <li>参考图片：</li>
+                            <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                            <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                            <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                        </ul>
+                    </div>
+                    <div class="statusContainer clearfix">
+                        <a class="status-active" href="javascript:void(0);">报价中</a>
+                        <p class="statusDate">
+                            截止时间：2016年06月30日
+                        </p>
+                    </div>
+                </div>
+            </div>
+                <div class="row row-close">
+                    <div class="col-md-12 clearfix">
+                        <div class="purchaseInfo">
+                            <p class="title-close">
+                                求购有处理的黑金沙花岗岩
+                            </p>
+                            <p >价格：<sapn class="priceShow">面议</sapn></p>
+                            <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                            <ul class="purchaseImgs">
+                                <li>参考图片：</li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                            </ul>
+                        </div>
+                        <div class="statusContainer clearfix">
+                            <a class="status-close" href="javascript:void(0);">交易结束</a>
+                            <p class="statusDate" style="display: none">
+                                截止时间：2016年06月30日
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-active">
+                    <div class="col-md-12 clearfix">
+                        <div class="purchaseInfo">
+                            <p class="title-active">
+                                求购有处理的黑金沙花岗岩
+                            </p>
+                            <p >价格：<sapn class="priceShow">面议</sapn></p>
+                            <p >联系人：陈先生<sapn class="priceShow">  13838385438</sapn></p>
+                            <ul class="purchaseImgs">
+                                <li>参考图片：</li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(1).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(2).png"></li>
+                                <li><img src="../../../public/images/PurchaseImgs/purchase(3).png"></li>
+                            </ul>
+                        </div>
+                        <div class="statusContainer clearfix">
+                            <a class="status-active" href="javascript:void(0);">报价中</a>
+                            <p class="statusDate">
+                                截止时间：2016年06月30日
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagerContainer">
+
+            </div>
+        </div>
+    </div>
+    <div class="adContainer clearfix">
+        <div class="publishApply">
+            <a href="#">发布供应信息</a>
+        </div>
+        <div class="publishPurchase">
+            <a href="#">发布求购信息</a>
+        </div>
+        <ul class="rightAd">
+            <li>
+                <h3>推荐商家</h3>
+            </li>
+            <li><a href="#"><img src="../../../public/images/rightAd1.png"></a></li>
+            <li><a href="#"><img src="../../../public/images/rightAd4.png"></a></li>
+            <li><a href="#"><img src="../../../public/images/rightAd2.png"></a></li>
+            <li><a href="#"><img src="../../../public/images/rightAd1.png"></a></li>
+            <li><a href="#"><img src="../../../public/images/rightAd3.png"></a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+<!--底部-->
+<div class="footContainer w100">
+    <div class="footContent w100">
+        <div class="containerCenter clearfix">
+            <div class="footLogo">
+                <a title="宁波石材网" href="Index.html"><img src="../../../public/images/sitelogoFooter.png"></a>
+            </div>
+            <div class="footHelper">
+                <div class="helperBlock">
+                    <ul>
+                        <li>
+                            <h4>供应服务</h4>
+                        </li>
+                        <li> <a target="_blank" title="商城采购流程" href="#">如何成为供应商</a></li>
+                        <li> <a target="_blank" title="帮您找货" href="#">如何发布产品</a></li>
+                        <li> <a target="_blank" title="在线找货" href="#">如何报价采购信息</a></li>
+                    </ul>
+                </div>
+                <div class="helperBlock">
+                    <ul>
+                        <li>
+                            <h4>采购服务</h4>
+                        </li>
+                        <li> <a target="_blank" title="商城采购流程" href="#">如何成为采购商</a></li>
+                        <li> <a target="_blank" title="帮您找货" href="#">如何发布采购需求</a></li>
+                        <li> <a target="_blank" title="在线找货" href="#">如何找货</a></li>
+                    </ul>
+                </div>
+                <div class="helperBlock">
+                    <ul>
+                        <li>
+                            <h4>常见问题</h4>
+                        </li>
+                        <li> <a target="_blank" title="商城采购流程" href="#">如何注册</a></li>
+                        <li> <a target="_blank" title="帮您找货" href="#">无法登录/忘记密码</a></li>
+                        <li> <a target="_blank" title="在线找货" href="">修改账号信息</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footBottom containerCenter">
+        <div class="footBeian">
+            <span>COPYRIGHT © 宁波石材网 www.nbscw.cn</span>&nbsp;&nbsp;
+            <span>浙ICP备123456789号</span>
+        </div>
+        <div class="footAboutUs">
+            <span><a href="#">关于我们</a></span>
+            <span><a href="#">法律声明</a></span>
+            <span><a href="#">联系我们</a></span>
+            <span><a href="#">帮助中心</a></span>
+            <span><a href="#">意见反馈</a></span>
+            <span><a href="#">友情链接</a></span>
+            <span></span>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript">
+    $(function(){
+        var totalCount=300,showCount = 32,limit = 10;
+        $('.pagerContainer').extendPagination({
+            totalCount: totalCount,
+            showCount: showCount,
+            limit: limit,
+            callback: function (curr, limit, totalCount) {
+                createTable(curr, limit, totalCount);
+            }
+        });
+
+
+        $(".allCategory").hover(function(){
+            $(".allCategory .categoryList").show();
+        },function(){
+            $(".allCategory .categoryList").hide();
+        });
+
+
+        var bigImg = null;
+        $(".purchaseImgs img").hover(function(){
+            var broBigImg = $(this).siblings();
+            if(broBigImg.length==0){
+                var imgSrc = $(this).attr("src");
+                var originalImgTop = $(this).position().top;
+                var originalImgLeft = $(this).position().left;
+
+
+                var bigImgTop = 50 + parseInt(originalImgTop);
+                var bigImgLeft = 50 + parseInt(originalImgLeft);
+
+                bigImg = $('<img>',{
+                    src:imgSrc,
+                    class:'bigImg'
+                }).css({
+
+                    cursor:'pointer',
+                    width:'250px',
+                    height:'250px',
+                    position:'absolute',
+                    top:bigImgTop,
+                    left:bigImgLeft,
+                    'z-index':'9999',
+                    display:'none'
+                });
+                $(this).after(bigImg);
+            }else{
+                if(bigImg != null)
+                bigImg = $(broBigImg[0]);
+            }
+
+            bigImg.show();
+
+        },function(){
+            bigImg.hide();
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宁波石材网---产品产品详情</title>
+    <link rel="stylesheet" type="text/css" href="../../../public/css/bootstrap.css">
+    <script type="text/javascript" src="../../../public/js/jquery.js"></script>
+    <script type="text/javascript" src="../../../public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../public/js/extendPagination.js"></script>
+    <!--<script type="text/javascript" src="js/proDetailPicsShow/base.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="../../../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/publicCommon.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/baseProDetail.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/proDetailPicsShow/picsShow.css">
+
+</head>
+<body>
+<!--顶部TOP-->
+<div class="headerTop w100">
+    <div class="topContainer containerCenter">
+        <div class="top-left">
+            <span>欢迎来到<a href="Index.html" target="_self" >宁波石材网</a></span>
+            <a href="" target="_blank">登录</a>
+            |
+            <a href="" target="_blank">注册</a>
+        </div>
+        <div class="top-right">
+            <a href="" target="_blank">会员中心</a>|
+            <a href="" target="_blank">帮助中心</a>|
+            <span>客服热线:0574-87654321</span>
+        </div>
+    </div>
+</div>
+<!--头部LOGO+搜索框-->
+<div class="headerSearch w100">
+    <div class="searchContainer containerCenter">
+        <div class="leftLogo">
+            <a href="Index.html" target="_self"><img src="../../../public/images/siteLogo.png"></a>
+        </div>
+        <div class="rightSearch">
+            <div class="dropdown searchSelect">
+                <div class="dropdown-toggle selectBox" data-toggle="dropdown" >
+                    供应<span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0);" >供应</a></li>
+                    <li  class="divider"></li>
+                    <li><a href="javascript:void(0);" >求购</a></li>
+                    <li class="divider"></li>
+                    <li><a href="javascript:void(0);"  >商家</a></li>
+                </ul>
+            </div>
+            <input placeholder="请输入关键词" class="keyInput">
+            <button class="searchBtn" id="keySearch">搜索</button>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<div class="nav-layout w100">
+    <div class="navContainer containerCenter">
+        <div class="allCategory">
+            <a href="#">产品分类</a>
+            <!--弹出产品类别栏-->
+            <div class="categoryList " style="display: none">
+                <ul>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="大理石">大理石</p></a>
+                            <p class="smallCategory">
+                                <span><a title="大板" href="#">大板</a></span>
+                                <span><a title="规格板" href="#">规格板</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="花岗岩">花岗岩</p></a>
+                            <p class="smallCategory">
+                                <span><a title="毛板" href="#">毛板</a></span>
+                                <span><a title="条板" href="#">条板</a></span>
+                                <span><a title="规格板" href="#">规格板</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="环境装饰">环境装饰</p></a>
+                            <p class="smallCategory">
+                                <span><a title="庭院产品" href="">庭院产品</a></span>
+                                <span><a title="环境石材" href="#">环境石材</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--<span><a title="大板" href="#">大板</a></span>-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="家居工艺">家居工艺</p></a>
+                            <p class="smallCategory">
+                                <span><a title="家具" href="#">家具</a></span>
+                                <span><a title="石工艺品" href="#">石工艺品</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="石材配套">石材配套</p></a>
+                            <p class="smallCategory">
+                                <span><a title="机械工具" href="#">机械工具</a></span>
+                                <span><a title="养护辅料" href="#">养护辅料</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--弹出产品类别栏End-->
+
+        </div>
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="Index.html">首页</a></li>
+            <li class="active"><a href="productsSearch.html">供应</a></li>
+            <li><a href="productsPurchase.html">求购</a></li>
+            <li><a href="companySearch.html">商家</a></li>
+            <li><a href="#">资讯</a></li>
+        </ul>
+
+    </div>
+</div>
+
+
+<div class="containerCenter clearfix">
+    <p>首页 > 供应 > 大理石</p>
+    <div class="InfoContainer clearfix">
+
+        <div class="proPicsContainer" id="preview">
+                <div  id="spec-n1" class="jqzoom">
+                    <img width="300" height="300" jqimg="images/product1.png" src="../../../public/images/product1.png" alt="">
+                </div>
+                <div id="spec-n5">
+                    <div id="spec-list">
+                        <div style="overflow:hidden;z-index:1;width:350px;height:56px;">
+                            <ul class="list-h" style="width: 310px; overflow: hidden; position: absolute; left: 0px; top: 0px; margin-top: 0px; margin-left: 0px;">
+                                <li><img src="../../../public/images/product1.png" style="border: 1px solid rgb(204, 204, 204); padding: 2px;"> </li>
+                                <li><img src="../../../public/images/product2.png" style="border: 1px solid rgb(204, 204, 204); padding: 2px;"> </li>
+                                <li><img src="../../../public/images/product3.png" style="border: 1px solid rgb(204, 204, 204); padding: 2px;"> </li>
+                                <li><img src="../../../public/images/product4.png" style="border: 1px solid rgb(204, 204, 204); padding: 2px;"> </li>
+                                <li><img src="../../../public/images/product2.png" style="border: 1px solid rgb(204, 204, 204); padding: 2px;"> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="baseInfoContainer">
+            <p class="pro-title">阿波罗   大理石  大板</p>
+            <p class="pro-remind">因产品的特殊性，商品详情仅供参考，购买请以实物为准。</p>
+            <div class="contact-panel clearfix">
+                <ul>
+                    <li>
+                        <label>电话:</label><span>0574-88762240</span>
+                    </li>
+                    <li>
+                        <label>联系人:</label><span>王先生</span>
+                    </li>
+                    <li>
+                        <label>邮箱:</label><span>wangxiansheng@163.com</span>
+                    </li>
+                </ul>
+            </div>
+            <p class="price-panel">
+                <label>价格:</label><span class="pro-price">130-150元/M²</span>
+                <span class="pro-stock">(库存532件)</span>
+            </p>
+            <p class="pro-spec"><!--可多条显示(最多三条)-->
+                <span class="spec-name">厚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度:</span>
+                <span class="spec-value">1.3cm&nbsp;&nbsp;&nbsp;&nbsp;1.6cm</span>
+            </p>
+            <p class="pro-spec"><!--可多条显示(最多三条)-->
+                <span class="spec-name">饰面工艺:</span>
+                <span class="spec-value">水洗面&nbsp;&nbsp;&nbsp;&nbsp;荔枝面</span>
+            </p>
+            <a class="pro-collect" href="#">立即收藏</a>
+            <a class="pro-inquiry" href="#">发送询价</a>
+        </div>
+        <div class="companyInfoContainer">
+            <div class="containerTitle">
+                <ul>
+                    <li>商家信息</li>
+                </ul>
+            </div>
+
+            <ul class="companyContainer clearfix">
+                <li>
+                    <p>欧达石材<span>QQ图标</span></p>
+                    <p>联系人:<span>王先生</span></p>
+                    <p>电话:<span class="phoneNum">13897654321</span></p>
+                </li>
+                <li>
+                    <img src="../../../public/images/company1.png">
+                </li>
+            </ul>
+            <h5>企业简介</h5>
+            <p>
+                山东省五莲县通达石材有限公司，坐落于江北石材重镇——五莲县街头镇。
+                境内蕴藏着丰富的花岗岩资源花岗岩储量大，矿脉厚、易开采，
+                现已探明可采资源约50亿立方米，2009年被中国石材协会授予“中国花岗岩第一矿”，
+                2010被授予“中国花岗岩之...
+            </p>
+            <a class="goShop" href="#">
+                进入店铺
+            </a>
+            <a class="collectShop" href="#">
+                收藏店铺
+            </a>
+        </div>
+    </div>
+    <div class="DetailContainer clearfix">
+        <div class="leftSideBarContainer clearfix">
+            <div class="barBlock clearfix">
+                <div class="blockTitle">欧达石材</div>
+                <p><label>联系人:</label><span>王先生</span></p>
+                <p><label>电&nbsp;&nbsp;&nbsp;&nbsp;话:</label><span class="phoneNum">13786543211</span></p>
+                <a href="#" class="blockGoShop">进店逛逛</a>
+                <a href="#" class="blockCollectShop">收藏店铺</a>
+            </div>
+            <div class="barBlock clearfix">
+                <div class="blockTitle">店铺公告</div>
+                <p>
+                    满2件包邮 八五折 /【主营石材】大理石 花岗岩 环境石材 园林工艺 室内装饰 养护石材
+                </p>
+            </div>
+            <div class="barBlock clearfix">
+                <div class="quickSearch clearfix">
+                    <input class="keyInput" placeholder="请输入关键词">
+                    <div class="quickSearchBtn"><a  href="#"></a></div>
+                </div>
+                <div class="blockTitle">产品分类</div>
+                <p>
+                    满2件包邮 八五折 /【主营石材】大理石 花岗岩 环境石材 园林工艺 室内装饰 养护石材
+                </p>
+            </div>
+            <div class="barBlock clearfix">
+                <div class="blockTitle">友情链接</div>
+                <ul class="friendLink">
+                    <li>
+                        <a href="#">红润建设</a>
+                    </li>
+                    <li>
+                        <a href="#">泰信石材</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightDetailContainer">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#detail" data-toggle="tab">
+                        商品详情
+                    </a>
+                </li>
+                <li><a href="#serviceRemind" data-toggle="tab">服务详情</a></li>
+
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="detail">
+                    <div class="detailContent">
+                        <p>
+                            <img src="https://cbu01.alicdn.com/img/ibank/2016/344/176/3236671443_1535279657.jpg" alt="p31-32 (2).jpg2" style="visibility: visible;">
+                            <br>
+                            五莲灰路沿石
+                            <br>
+                            <img src="https://cbu01.alicdn.com/img/ibank/2016/656/379/3282973656_1535279657.jpg" alt="undefined" style="visibility: visible;">
+                            <br>
+                            S型路沿石
+                            <br>
+                            路沿石定义
+                            <br>
+                            定义：路沿石是指用石料或者混凝土浇注成型的条块状物体用在路面边缘的界石，
+                            <br>
+                            路沿石也称道牙石或路边石、路牙石。 &nbsp;&nbsp;
+                            <br>路沿石是在路面上区分车行道、人行道、绿地、隔离带和道路其他部分的界线，起到保障行人、
+                            <br>
+                            车辆交通安全和保证路面边缘整齐的作用。
+                            <br>路沿石施工方案<br>1.路沿石质量标准：<br>直顺度：10mm,&nbsp;相邻块高差：3mm,&nbsp;缝宽：±3mm,&nbsp;侧石顶面高程；±10mm,
+                            <br>2.路沿石材质要求：
+                            <br>路沿石石料采用质地均匀的天然麻石机械切削加工而成，石材的强度必须合格，要求其色泽均匀，表面无裂纹，棱角完整，外观一致，无明显斑点、色差，不允许有风化现象，
+                            <br>装卸时不准摔、砸、撞、碰，以免造成损伤。<br>3.路沿石加工要求：
+                            <br>按统一长度进行下料，外露面必须机切抛光，长度允许误差在±20mm范围内，宽度、厚度、高度允许误差在±2mm范围内。<br>4.路沿石施工要求：
+                            <br>a.路沿石必须挂通线进行施工,按侧平面顶面示高标线绷紧，按线码砌侧平石，侧平石要安正，切忌前仰后合，侧面顶线顺直圆滑平顺，无高低错牙现象，平面无上下错台、内外错牙现象。 &nbsp;&nbsp;
+                            <br>b.路沿石必须座浆砌筑，座浆必须密实，严禁塞缝砌筑； &nbsp;&nbsp;<br>c.路沿石接缝处错位不超过1mm；侧石和平石必须在中间均匀错缝。 &nbsp;&nbsp;
+                            <br>d.路沿石侧平石应保证尺寸和光洁度满足设计要求。外观美观，对弯道部分侧石应按设计半径专门加工弯道石，砌筑时保证线形流畅、圆顺、拼缝紧密。弧形侧石必须人工精凿后抛光处理。 &nbsp;&nbsp;
+                            <br>e.路沿石后背应还土夯实，夯实宽度不小于50mm，厚度不小于15mm。 &nbsp;&nbsp;
+                            <br>f.路沿石勾缝：勾缝时必须再挂线，把侧石缝内的杂物剔除干净，用水润湿，然后用1：2.5水泥砂浆灌缝填实勾干。 &nbsp;&nbsp;
+                            <br>g.侧平石勾缝、安砌后适当浇水养护。<br>路沿石的形式
+                            <br>路沿石的形式有立式，斜式和平式等。在路沿石上行走，既简单又有效的步行方法来调节身体的五脏六腑平衡，既可增加乐趣，又可防病治病，延年益寿。
+                            <br>路沿石是在路面上区分车行道、人行道、绿地、隔离带和道路其他部分的界线，起到保障行人、车辆交通安全和保证路面沿缘整齐的作用。
+                            <img src="https://cbu01.alicdn.com/img/ibank/2016/783/934/3284439387_1535279657.jpg" alt="undefined" style="visibility: visible;">
+                            <br>S型路沿石铺好效果<br><img src="https://cbu01.alicdn.com/img/ibank/2016/542/266/3236662245_1535279657.jpg" alt="P1010318" style="visibility: visible;">
+                            <br>五莲红高光路沿石<br><br></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="serviceRemind">
+                    <div class="detailContent">
+                        <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+                            TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="productResultsList">
+                <p>推荐商品</p>
+                <div class="container" style="width: 100%">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="#"><img src="../../../public/images/product1.png"></a>
+                            <div class="proInfo">
+                                <p><a href="#">产品名称</a></p>
+                                <p >价格：<sapn class="priceShow">面议</sapn></p>
+                                <p>
+                                    <span >欣欣石材</span>
+                                    <span class="productUpdate">2016-08-01</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#"><img src="../../../public/images/product3.png"></a>
+                            <div class="proInfo">
+                                <p><a href="#">产品名称</a></p>
+                                <p >价格：<sapn class="priceShow">面议</sapn></p>
+                                <p>
+                                    <span >欣欣石材</span>
+                                    <span class="productUpdate">2016-08-01</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#"><img src="../../../public/images/product2.png"></a>
+                            <div class="proInfo">
+                                <p><a href="#">产品名称</a></p>
+                                <p >价格：<sapn class="priceShow">面议</sapn></p>
+                                <p>
+                                    <span >欣欣石材</span>
+                                    <span class="productUpdate">2016-08-01</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#"><img src="../../../public/images/product4.png"></a>
+                            <div class="proInfo">
+                                <p><a href="#">产品名称</a></p>
+                                <p >价格：<sapn class="priceShow">面议</sapn></p>
+                                <p>
+                                    <span >欣欣石材</span>
+                                    <span class="productUpdate">2016-08-01</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<div class="footContainer w100">
+    <div class="footContent w100">
+        <div class="containerCenter clearfix">
+            <div class="footLogo">
+                <a title="宁波石材网" href="Index.html"><img src="../../../public/images/sitelogoFooter.png"></a>
+            </div>
+            <div class="footHelper">
+                <div class="helperBlock">
+                    <ul>
+                        <li>
+                            <h4>供应服务</h4>
+                        </li>
+                        <li> <a target="_blank" title="商城采购流程" href="#">如何成为供应商</a></li>
+                        <li> <a target="_blank" title="帮您找货" href="#">如何发布产品</a></li>
+                        <li> <a target="_blank" title="在线找货" href="#">如何报价采购信息</a></li>
+                    </ul>
+                </div>
+                <div class="helperBlock">
+                    <ul>
+                        <li>
+                            <h4>采购服务</h4>
+                        </li>
+                        <li> <a target="_blank" title="商城采购流程" href="#">如何成为采购商</a></li>
+                        <li> <a target="_blank" title="帮您找货" href="#">如何发布采购需求</a></li>
+                        <li> <a target="_blank" title="在线找货" href="#">如何找货</a></li>
+                    </ul>
+                </div>
+                <div class="helperBlock">
+                    <ul>
+                        <li>
+                            <h4>常见问题</h4>
+                        </li>
+                        <li> <a target="_blank" title="商城采购流程" href="#">如何注册</a></li>
+                        <li> <a target="_blank" title="帮您找货" href="#">无法登录/忘记密码</a></li>
+                        <li> <a target="_blank" title="在线找货" href="">修改账号信息</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footBottom containerCenter">
+        <div class="footBeian">
+            <span>COPYRIGHT © 宁波石材网 www.nbscw.cn</span>&nbsp;&nbsp;
+            <span>浙ICP备123456789号</span>
+        </div>
+        <div class="footAboutUs">
+            <span><a href="#">关于我们</a></span>
+            <span><a href="#">法律声明</a></span>
+            <span><a href="#">联系我们</a></span>
+            <span><a href="#">帮助中心</a></span>
+            <span><a href="#">意见反馈</a></span>
+            <span><a href="#">友情链接</a></span>
+            <span></span>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+<script src="../../../public/js/proDetailPicsShow/jszoom.js" type=text/javascript></script>
+<script type=text/javascript>
+    $(function(){
+        $(".jqzoom").jqueryzoom({
+            xzoom:350,
+            yzoom:350,
+            offset:10,
+            position:"right",
+            preload:1,
+            lens:1
+        });
+
+        $("#spec-list img").bind("mouseover",function(){
+            var src=$(this).attr("src");
+            $("#spec-n1 img").eq(0).attr({
+                src:src.replace("\/n5\/","\/n1\/"),
+                jqimg:src.replace("\/n5\/","\/n0\/")
+            });
+            $(this).css({
+                "border":"2px solid #ff6600",
+                "padding":"1px"
+            });
+        }).bind("mouseout",function(){
+            $(this).css({
+                "border":"1px solid #ccc",
+                "padding":"2px"
+            });
+        });
+    })
+</script>
+</html>

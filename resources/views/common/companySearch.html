@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宁波石材网---商家</title>
+    <link rel="stylesheet" type="text/css" href="../../../public/css/bootstrap.css">
+    <script type="text/javascript" src="../../../public/js/jquery.js"></script>
+    <script type="text/javascript" src="../../../public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../public/js/extendPagination.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../../public/css/baseCompany.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/publicCommon.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/reset.css">
+</head>
+<body>
+<!--顶部TOP-->
+<div class="headerTop w100">
+    <div class="topContainer containerCenter">
+        <div class="top-left">
+            <span>欢迎来到<a href="Index.html" target="_self" >宁波石材网</a></span>
+            <a href="" target="_blank">登录</a>
+            |
+            <a href="" target="_blank">注册</a>
+        </div>
+        <div class="top-right">
+            <a href="" target="_blank">会员中心</a>|
+            <a href="" target="_blank">帮助中心</a>|
+            <span>客服热线:0574-87654321</span>
+        </div>
+    </div>
+</div>
+<!--头部LOGO+搜索框-->
+<div class="headerSearch w100">
+    <div class="searchContainer containerCenter">
+        <div class="leftLogo">
+            <a href="Index.html" target="_self"><img src="../../../public/images/siteLogo.png"></a>
+        </div>
+        <div class="rightSearch">
+            <div class="dropdown searchSelect">
+                <div class="dropdown-toggle selectBox" data-toggle="dropdown" >
+                    供应<span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0);" >供应</a></li>
+                    <li  class="divider"></li>
+                    <li><a href="javascript:void(0);" >求购</a></li>
+                    <li class="divider"></li>
+                    <li><a href="javascript:void(0);"  >商家</a></li>
+                </ul>
+            </div>
+            <input placeholder="请输入关键词" class="keyInput">
+            <button class="searchBtn" id="keySearch">搜索</button>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<div class="nav-layout w100">
+    <div class="navContainer containerCenter">
+        <div class="allCategory">
+            <a href="#">产品分类</a>
+            <!--弹出产品类别栏-->
+            <div class="categoryList " style="display: none">
+                <ul>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="大理石">大理石</p></a>
+                            <p class="smallCategory">
+                                <span><a title="大板" href="#">大板</a></span>
+                                <span><a title="规格板" href="#">规格板</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="花岗岩">花岗岩</p></a>
+                            <p class="smallCategory">
+                                <span><a title="毛板" href="#">毛板</a></span>
+                                <span><a title="条板" href="#">条板</a></span>
+                                <span><a title="规格板" href="#">规格板</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="环境装饰">环境装饰</p></a>
+                            <p class="smallCategory">
+                                <span><a title="庭院产品" href="">庭院产品</a></span>
+                                <span><a title="环境石材" href="#">环境石材</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--<span><a title="大板" href="#">大板</a></span>-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="家居工艺">家居工艺</p></a>
+                            <p class="smallCategory">
+                                <span><a title="家具" href="#">家具</a></span>
+                                <span><a title="石工艺品" href="#">石工艺品</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divContent">
+                            <a href="#"><p class="bigCategory" title="石材配套">石材配套</p></a>
+                            <p class="smallCategory">
+                                <span><a title="机械工具" href="#">机械工具</a></span>
+                                <span><a title="养护辅料" href="#">养护辅料</a></span>
+                            </p>
+                            <!--<div class="list_con">-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--弹出产品类别栏End-->
+
+        </div>
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="Index.html">首页</a></li>
+            <li><a href="productsSearch.html">供应</a></li>
+            <li><a href="productsPurchase.html">求购</a></li>
+            <li class="active" href="companySearch.html"><a href="#">商家</a></li>
+            <li><a href="#">资讯</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<!--内容块-->
+<div class="containerCenter clearfix">
+    <div class="searchArea">
+        <div class="filterArea clearfix">
+            <p>首页 > 供应 > 大理石</p>
+            <div class="filterContainer clearfix">
+                <dl class="xgt_st_dl ">
+                    <dt>
+                        类型:
+                    </dt>
+                    <dd>
+                        <a rel="nofollow" class="on" href="#">全部</a>
+                        <a rel="nofollow" href="productsSearch.html">大理石</a>
+                        <a rel="nofollow" href="productsSearch.html">花岗岩</a>
+                        <a rel="nofollow" href="productsSearch.html">庭院产品</a>
+                        <a rel="nofollow" href="productsSearch.html">环境石材</a>
+                        <a rel="nofollow" href="productsSearch.html">室内装饰</a>
+                        <a rel="nofollow" href="productsSearch.html">石工艺品</a>
+                        <a rel="nofollow" href="productsSearch.html">机械工具</a>
+                        <a rel="nofollow" href="productsSearch.html">养护辅料</a>
+                        <a rel="nofollow" href="productsSearch.html">综合加工</a>
+                        <a rel="nofollow" href="productsSearch.html">装饰设计</a>
+                        <a rel="nofollow" href="productsSearch.html">建筑工程</a>
+                    </dd>
+                </dl>
+                <dl class="xgt_st_dl ">
+                    <dt>
+                        筛选条件:
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li>类型：大理石&nbsp;&nbsp;&nbsp;&nbsp;X</li>
+                            <li>用途：大板&nbsp;&nbsp;&nbsp;&nbsp;X</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="xgt_st_dl ">
+                    <dt>
+                        搜索:
+                    </dt>
+                    <dd>
+                        <input placeholder="请输入关键词" class="keyInput">
+                        <button class="searchBtn" id="searchBtn">搜索</button>
+                    </dd>
+                </dl>
+            </div>
+            <a class="siteAd"><img src="../../../public/images/companysearchPic/logo1.png"></a>
+        </div>
+        <div class="productResultsList">
+            <div class="container" style="width: 100%">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchaseInfo">
+                            <a href="#" class="company-title">
+                                广西鸿宇石材厂
+                            </a>
+                            <ul>
+                                <li>主营：<sapn class="company-business">芝麻黑、黄锈石、中国黑、幻彩红...</sapn></li>
+                                <li>联系人：<sapn class="company-contact">陈先生</sapn></li>
+                                <li>电话：<sapn class="company-phoneNum">1379245612</sapn></li>
+                                <li>地址：<sapn class="company-addr">庄桥石材城C区26号</sapn></li>
+                            </ul>
+                            <img src="../../../public/images/companysearchPic/logo1.png" class="company-logo" title="公司名称" alt="公司名称" >
+                        </div>
+                        <ul class="sellContainer">
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro1.png" title="产品1"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>面议</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro2.png" title="产品2"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>1000元/㎡</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../../public/images/companysearchPic/pro3.png" title="产品3"></a>
+                                <a href="#" class="proName">产品名称</a>
+                                <p>价格:<span>500-1000元/㎡</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pagerContainer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+    $(function(){
+        var totalCount=300,showCount = 32,limit = 10;
+        $('.pagerContainer').extendPagination({
+            totalCount: totalCount,
+            showCount: showCount,
+            limit: limit,
+            callback: function (curr, limit, totalCount) {
+                createTable(curr, limit, totalCount);
+            }
+        });
+
+
+        $(".allCategory").hover(function(){
+            $(".allCategory .categoryList").show();
+        },function(){
+            $(".allCategory .categoryList").hide();
+        });
+
+    })
+</script>
+</html>

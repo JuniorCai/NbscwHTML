@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息通知</title>
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/bootstrap.css">
+    <script type="text/javascript" src="../../../../public/js/jquery.js"></script>
+    <script type="text/javascript" src="../../../../public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/memberCenter/basePublicCenter.css">
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../../public/css/publicCommon.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+</head>
+<body>
+<!--导航栏-->
+<!--#include file="../shared/header/topNav.inc"-->
+<div class="nav-layout w100">
+    <div class="navContainer  clearfix">
+        <div class="centerTitle">
+            <a href="#"><img src="../../../../public/images/memberCenter/logo.png"></a>
+        </div>
+        <ul class="centerNav">
+            <li class="active navItem">账号管理</li>
+            <li class="navItem">信息管理</li>
+            <li class="navItem"><a href="../../common/Index.html">网站首页</a></li>
+        </ul>
+    </div>
+</div>
+<!--#include virtual-->
+
+<div class="clearfix bodyContent" style="width: 100%">
+    <!--二级菜单-->
+    <div class="navMenuContainer  clearfix">
+        <div class="menuTitle">
+            账号管理
+        </div>
+        <ul class="menuList">
+            <li>消息通知<a>发信</a></li>
+            <li>账户设置<a>查看</a></li>
+            <li>收藏管理<a>添加</a></li>
+            <li>贸易提醒<a>添加</a></li>
+            <li>我的友商<a>添加</a></li>
+            <li>客服中心<a>提问</a></li>
+        </ul>
+    </div>
+    <div class="contentContainer clearfix">
+        <div class="menu">
+            <table cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td id="inbox" class="tab"><a href="?action=inbox"><span>收件箱</span></a></td>
+                    <td id="recycle" class="tab_on"><a href="?action=recycle"><span>回收站</span></a></td>
+                </tr>
+                </tbody></table>
+        </div>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane  active" id="detail">
+                <div class="detailContent">
+                    <div class="searchColumn">
+                        <form>
+                            <select name="typeid">
+                                <option value="-1">类型</option>
+                                <option value="0">普通</option>
+                                <option value="1">询价</option>
+                                <option value="2">报价</option>
+                                <option value="3">留言</option>
+                                <option value="4">信使</option>
+                            </select>
+                            <select name="style">
+                                <option value="">标记</option>
+                                <option style="background:#FF0000;" value="FF0000">&nbsp;</option>
+                                <option style="background:#0000FF;" value="0000FF">&nbsp;</option>
+                                <option style="background:#000000;" value="000000">&nbsp;</option>
+                                <option style="background:#008080;" value="008080">&nbsp;</option>
+                                <option style="background:#008000;" value="008000">&nbsp;</option>
+                                <option style="background:#800000;" value="800000">&nbsp;</option>
+                                <option style="background:#808000;" value="808000">&nbsp;</option>
+                                <option style="background:#808080;" value="808080">&nbsp;</option>
+                            </select>
+                            <select name="fields">
+                                <option selected="" value="title">标题</option>
+                                <option value="content">全文</option>
+                            </select>
+                            <input type="text" title="关键词" size="50" value="" placeholder="请输入关键词" name="kw">
+                            <input type="submit" class="btn" value=" 搜 索 ">
+                            <input type="button" class="btn" value=" 重 置 ">
+                        </form>
+                    </div>
+                    <div class="infoNav">
+                        <table cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td class="active"><a href="?action=inbox">全部</a></td>
+                                <td class=""><a href="?action=inbox&amp;typeid=0">普通</a></td>
+                                <td class=""><a href="?action=inbox&amp;typeid=1">询价</a></td>
+                                <td class=""><a href="?action=inbox&amp;typeid=2">报价</a></td>
+                                <td class=""><a href="?action=inbox&amp;typeid=3">留言</a></td>
+                                <td class=""><a href="?action=inbox&amp;typeid=4">信使</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <form method="post">
+                        <div class="infoTable clearfix">
+                            <table cellspacing="0" cellpadding="0" class="tb">
+                                <tbody>
+                                    <tr>
+                                        <th width="20"><input type="checkbox" onclick="checkall(this.form);"></th>
+                                        <th width="40">类型</th>
+                                        <th>&nbsp;标 题</th>
+                                        <th width="150">发件人</th><th width="160" align="center">时 间</th>
+                                        <th width="50" align="center">标记</th>
+                                    </tr>
+                                    <tr align="center" onmouseout="this.className='';" onmouseover="this.className='on';" class="">
+                                        <td><input type="checkbox" disabled=""></td>
+                                        <td>
+                                            <img width="16" height="16" alt="" title="系统广播" src="http://shicaicheng.gotoip55.com/member/image/message_sys.gif">
+                                        </td>
+                                        <td align="left"><a href="?action=show&amp;itemid=25"><span title="同志们辛苦了1111" class="f_red">同志们辛苦了1111</span></a></td>
+                                        <td>系统广播</td>
+                                        <td>2016年07月21日 11:24</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr align="center" onmouseout="this.className='';" onmouseover="this.className='on';" class="">
+                                        <td><input type="checkbox" value="24" name="itemid[]"></td>
+                                        <td>
+                                            <a href="?action=inbox&amp;typeid=0">
+                                                <img width="16" height="16" alt="" title="普通" src="http://shicaicheng.gotoip55.com/member/image/message_0.gif">
+                                            </a>
+                                        </td>
+                                        <td align="left"><a title="rgrfsdf编号：24" class="t" href="?action=show&amp;itemid=24">rgrfsdf</a></td>
+                                        <td align="center"><a target="_blank" href="http://shicaicheng.gotoip55.com/index.php?homepage=junior">junior</a></td><td>2016年07月20日 12:39</td>
+                                        <td>
+                                            <select onchange="Go('?itemid=24&amp;action=color&amp;style='+this.value);" name="style">
+                                                <option value="">标记</option>
+                                                <option value="">取消</option>
+                                                <option style="background:#FF0000;" value="FF0000">&nbsp;</option>
+                                                <option style="background:#0000FF;" value="0000FF">&nbsp;</option>
+                                                <option style="background:#000000;" value="000000">&nbsp;</option>
+                                                <option style="background:#008080;" value="008080">&nbsp;</option>
+                                                <option style="background:#008000;" value="008000">&nbsp;</option>
+                                                <option style="background:#800000;" value="800000">&nbsp;</option>
+                                                <option style="background:#808000;" value="808000">&nbsp;</option>
+                                                <option style="background:#808080;" value="808080">&nbsp;</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr align="center" onmouseout="this.className='';" onmouseover="this.className='on';" class="">
+                                        <td><input type="checkbox" value="21" name="itemid[]"></td>
+                                        <td>
+                                            <a href="?action=inbox&amp;typeid=0">
+                                                <img width="16" height="16" alt="" title="普通" src="http://shicaicheng.gotoip55.com/member/image/message_0.gif">
+                                            </a>
+                                        </td>
+                                        <td align="left"><a title="eqweqweqweq编号：21" class="t" href="?action=show&amp;itemid=21">eqweqweqweq</a></td>
+                                        <td align="center"><a target="_blank" href="http://shicaicheng.gotoip55.com/index.php?homepage=junior">junior</a></td><td>2016年07月19日 22:56</td>
+                                        <td>
+                                            <select onchange="Go('?itemid=21&amp;action=color&amp;style='+this.value);" name="style">
+                                                <option value="">标记</option>
+                                                <option value="">取消</option>
+                                                <option style="background:#FF0000;" value="FF0000">&nbsp;</option>
+                                                <option style="background:#0000FF;" value="0000FF">&nbsp;</option>
+                                                <option style="background:#000000;" value="000000">&nbsp;</option>
+                                                <option style="background:#008080;" value="008080">&nbsp;</option>
+                                                <option style="background:#008000;" value="008000">&nbsp;</option>
+                                                <option style="background:#800000;" value="800000">&nbsp;</option>
+                                                <option style="background:#808000;" value="808000">&nbsp;</option>
+                                                <option style="background:#808080;" value="808080">&nbsp;</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr align="center" onmouseout="this.className='';" onmouseover="this.className='on';" class="">
+                                        <td><input type="checkbox" value="19" name="itemid[]"></td>
+                                        <td>
+                                            <a href="?action=inbox&amp;typeid=4">
+                                                <img width="16" height="16" alt="" title="信使" src="http://shicaicheng.gotoip55.com/member/image/message_4.gif">
+                                            </a>
+                                        </td>
+                                        <td align="left"><a title="欢迎加入网上石材城编号：19" class="f_b" href="?action=show&amp;itemid=19">欢迎加入网上石材城</a></td>
+                                        <td align="center">系统信使</td><td>2016年07月18日 13:35</td>
+                                        <td>
+                                            <select onchange="Go('?itemid=19&amp;action=color&amp;style='+this.value);" name="style">
+                                                <option value="">标记</option>
+                                                <option value="">取消</option>
+                                                <option style="background:#FF0000;" value="FF0000">&nbsp;</option>
+                                                <option style="background:#0000FF;" value="0000FF">&nbsp;</option>
+                                                <option style="background:#000000;" value="000000">&nbsp;</option>
+                                                <option style="background:#008080;" value="008080">&nbsp;</option>
+                                                <option style="background:#008000;" value="008000">&nbsp;</option>
+                                                <option style="background:#800000;" value="800000">&nbsp;</option>
+                                                <option style="background:#808000;" value="808000">&nbsp;</option>
+                                                <option style="background:#808080;" value="808080">&nbsp;</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btns ">
+                                <span class="f_r">
+                                <input type="text" onfocus="if(this.value=='输入编号,如135')this.value='';" id="m_id" size="15" placeholder="输入编号,如135">
+                                <input type="button" onclick="if(Dd('m_id').value.match(/^[0-9]{1,}$/)){Go('?action=show&amp;itemid='+Dd('m_id').value);return;}Dd('m_id').value='';Dd('m_id').focus();" class="btn" value=" 查 看 ">
+                                </span>
+                                <input type="submit" onclick="this.form.action='?action=mark';" class="btn" value=" 标记已读 ">
+                                <input type="submit" onclick="if(confirm('确定要标记全部信件为已读吗？此操作不可撤销')){this.form.action='?action=markall';}else{return false;}" class="btn" value=" 全部已读 ">
+                                <input type="submit" onclick="this.form.action='?action=delete';" class="btn" value=" 回收站 ">
+                                <input type="submit" onclick="if(confirm('确定要删除选中信件吗？此操作不可撤销')){this.form.action='?action=delete&amp;recycle=0';}else{return false;}" class="btn" value=" 彻底删除 ">
+                                <input type="submit" onclick="if(confirm('确定要清空收件箱信件吗？此操作不可撤销')){this.form.action='?action=clear&amp;status=3';}else{return false;}" class="btn" value=" 清 空 ">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="limit">
+                        收件箱容量 <span class="f_b f_red">20</span> 条&nbsp;&nbsp;&nbsp;
+                        当前接收 <span class="f_b">3</span> 条&nbsp;&nbsp;&nbsp;
+                        还可以接收 <span class="f_b f_blue">17</span> 条&nbsp;&nbsp;&nbsp;
+                        建议定期删除无用信件
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
