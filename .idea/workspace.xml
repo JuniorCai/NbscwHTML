@@ -1,147 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81327beb-adcc-420d-917c-a9d215a64fdc" name="默认" comment="平台初始基本HTML页面">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/PurchaseImgs/purchase(1).png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/PurchaseImgs/purchase(2).png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/PurchaseImgs/purchase(3).png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/arrow1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/arrow2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/arrow3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/arrow4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/banner1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/banner2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/banner3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/company1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyElegant/elegant1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyElegant/elegant2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyElegant/elegant3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyElegant/elegant4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyHonor/honor1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyRecommend/recommend1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyRecommend/recommend2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyRecommend/recommend3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyRecommend/recommend4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companyRecommend/recommend5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companysearchPic/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companysearchPic/pro1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companysearchPic/pro2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/companysearchPic/pro3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/cx.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/duigou.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/friendLinkLogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/lockMoveIn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/lockMoveOut.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/loginPic.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/logosmall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/memberCenter/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/memberCenter/message_sys.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/memberCenter/nav_bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/memberCenter/showMember.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/memberCenter/side_head.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/memberCenter/u39.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/proDetailPicsShow/left.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/proDetailPicsShow/right.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/qqLogin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/qqService.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/quickSearch.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/registerIn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/registerOut.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/resetDone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/rightAd1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/rightAd2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/rightAd3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/rightAd4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/rit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/selectBox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/siteLogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/siteTips.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sitelogoFooter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sitelogosmall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/weixin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/NbscwHTML.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/companySearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/proInquiry.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/productDetail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/productsPurchase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/productsSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/baseCompany.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/baseIndex.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/baseProDetail.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/basePurchase.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/baseSearch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-select.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/companySite/baseCompanySite.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/memberCenter/baseCompanyCenter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/memberCenter/basePersonalCenter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/memberCenter/basePublicCenter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/proDetailPicsShow/picsShow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/publicCommon.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/userOperateCss/baseFindPassword.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/userOperateCss/baseLogin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/userOperateCss/baseRegister.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/zoom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap-select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap-select.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/extendPagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.bootstrap.newsbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.bootstrap.newsbox.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/proDetailPicsShow/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/proDetailPicsShow/jquery-1.2.6.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/proDetailPicsShow/jszoom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/proDetailPicsShow/lib.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/zoom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/zoom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/companySite/companyContact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/companySite/companyElegant.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/companySite/companyIntroduction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/companySite/companyProducts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/companySite/companyPurchase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/companySite/companyRecruitment.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/companySite/recruitmentDetail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/companySite/siteIndex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/memberCenter/personalCenter/InfoManagement/IntegralManagement.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/memberCenter/personalCenter/InfoManagement/purchaseManagement.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/memberCenter/personalCenter/accountSettings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/memberCenter/personalCenter/businessFriend.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/memberCenter/personalCenter/businessRemind.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/memberCenter/personalCenter/personalIndex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/memberCenter/personalCenter/systemInfo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/memberCenter/shared/header/topNav.inc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/userOperatePage/chooseFindWay.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/userOperatePage/findPwdByEmail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/userOperatePage/findPwdByPhone.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/userOperatePage/logIn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/userOperatePage/register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/userOperatePage/resetDone.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/userOperatePage/resetPwd.html" />
-    </list>
+    <list default="true" id="81327beb-adcc-420d-917c-a9d215a64fdc" name="默认" comment="平台初始基本HTML页面" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -155,98 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="baseProDetail.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/baseProDetail.css">
+      <file leaf-file-name="logIn.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/userOperatePage/logIn.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/proDetailPicsShow/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="597" lean-forward="false" selection-start-line="0" selection-start-column="597" selection-end-line="0" selection-end-column="597" />
-              <folding>
-                <marker date="1471827696619" expanded="true" signature="4278:4309" ph="..." />
-                <marker date="1471827696619" expanded="true" signature="9075:9242" ph="..." />
-                <marker date="1471827696619" expanded="true" signature="10351:10482" ph="..." />
-                <marker date="1471827696619" expanded="true" signature="10651:10665" ph="..." />
-                <marker date="1471827696619" expanded="true" signature="11304:11614" ph="..." />
-                <marker date="1471827696619" expanded="true" signature="11712:12020" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="npm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/npm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reset.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/reset.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="82" lean-forward="false" selection-start-line="1" selection-start-column="82" selection-end-line="1" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/bootstrap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="367" column="20" lean-forward="false" selection-start-line="367" selection-start-column="20" selection-end-line="367" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/common/Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="proInquiry.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/common/proInquiry.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publicCommon.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/publicCommon.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="siteIndex.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/companySite/siteIndex.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            <state relative-caret-position="528">
+              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -304,24 +77,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="NbscwHTML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NbscwHTML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NbscwHTML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,12 +181,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495777490135</updated>
-      <workItem from="1495777491287" duration="2048000" />
+      <workItem from="1495777491287" duration="8131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2048000" />
+    <option name="totallyTimeSpent" value="8131000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,7 +200,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18694049" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18694049" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864866" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -554,6 +309,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/memberCenter/personalCenter/systemInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/memberCenter/personalCenter/InfoManagement/purchaseManagement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="95" lean-forward="true" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/userOperatePage/logIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding />
         </state>
       </provider>
